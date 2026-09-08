@@ -42,14 +42,14 @@ A CRMetrics object can be initialized in different ways using
 # Vignette
 
 For usage, please see the
-[vignette](http://kkh.bric.ku.dk/rasmus/CRMetrics/walkthrough.html)
-/ [code](https://github.com/khodosevichlab/CRMetrics/blob/main/inst/docs/walkthrough.Rmd).
+[vignette](https://kkh.bric.ku.dk/laura/walkthrough_download_from_github.html)
+
 
 # Python integrations
 
 CRMetrics makes use of several Python packages, some of them through the
 `reticulate` package in R, please see the included [example
-workflow](http://kkh.bric.ku.dk/rasmus/CRMetrics/walkthrough.html#using-python-modules)
+workflow](https://kkh.bric.ku.dk/laura/walkthrough_download_from_github.html#Using_Python_modules)
 in the vignette.
 
 # Cite
