@@ -454,7 +454,7 @@ addPlotStatsSamples <- function(p,
 }
 
 #' @title Add summary metrics
-#' @description Add summary metrics by reading Cell Ranger or Parse's split-pipe metrics summary files.
+#' @description Add summary metrics by reading Cell Ranger or Parse Biosciences split-pipe metrics summary files.
 #' @param data.path Path to count data.
 #' @param metadata Metadata for samples.
 #' @param n.cores Number of cores for the calculations (default = 1).

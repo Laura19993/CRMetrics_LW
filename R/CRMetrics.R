@@ -379,7 +379,7 @@ CRMetrics <- R6Class("CRMetrics", lock_objects = FALSE,
   #' crm$getExpectedCells()
   getExpectedCells = function(samples = self$metadata$sample) {
     expected.cells <- self$summary.metrics %>% 
-      filter(metric == "estimated number of cells") %$% 
+      filter(metric  %in% c("estimated number of cells", "number_of_cells", "cells")) %$% # Parse uses "number_of_cells", flex&flexv2: "cells"
       setNames(value, sample) %>%
       .[samples]
     
