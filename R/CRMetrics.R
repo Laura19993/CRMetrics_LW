@@ -901,18 +901,18 @@ CRMetrics <- R6Class("CRMetrics", lock_objects = FALSE,
     if (!is.null(doublet.method)) {
       dres <- self$doublets[[doublet.method]]$result
       if (is.null(dres)) stop("No results found for doublet.method '",doublet.method,"'. Please run doubletDetection(method = '",doublet.method,"'.")
-      # label by doublet scores
+      # label by  continuous doublet scores
       if (doublet.scores) {
         doublets <- dres$scores
         label <- "scores"
         
-      # label by own doublet score threshold  
-      } else if (doublet.score.threshold > 0) {
+      # label by user-defined doublet score threshold  
+      } else if (!is.null(doublet.score.threshold) && doublet.score.threshold > 0) { 
         doublets <- dres$scores
         doublets <- (doublets > doublet.score.threshold) * 1
         label <- paste0("scores: cells with doublet score > ", doublet.score.threshold, " marked in red")
       } else {
-        # label by results of method
+      # label by results of method
         doublets <- dres$labels * 1
         label <- "labels (detected doublets marked in red)"
       } 
